@@ -42,3 +42,26 @@ C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\Ap
 C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\LogReader.g.resources
 C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\LogReader.Properties.Resources.resources
 C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\LogReader.csproj.GenerateResource.Cache
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\LogReader.exe.config
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\LogReader.exe
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\LogReader.pdb
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\NecroLogs.dll
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\NecroLogs.pdb
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.xml
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader.csprojResolveAssemblyReference.cache
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\MainWindow.baml
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\MainWindow.g.cs
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\App.g.cs
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader_MarkupCompile.cache
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader_MarkupCompile.lref
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\App.baml
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader.g.resources
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader.Properties.Resources.resources
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader.csproj.GenerateResource.Cache
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader.exe
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader.pdb

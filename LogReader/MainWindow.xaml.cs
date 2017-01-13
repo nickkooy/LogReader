@@ -35,11 +35,11 @@ namespace LogReader
 		const string TestFile = "1.txt";
 
 		string ndDir;
-        bool? onlyItems = true;
         List<LogAlert> alerts = new List<LogAlert>();
         ObservableCollection<LogAlert> alertsObs;
         bool? autoscroll = true;
         bool? ignoregold = true;
+        bool? onlyItems = true;
         LReader reader = null;
 
         public MainWindow()
@@ -49,7 +49,7 @@ namespace LogReader
 
 			InitializeComponent();
             CreateBinding("AutoScroll", CheckBox.IsCheckedProperty, chkAutoScroll);
-            CreateBinding("ShowOnlyItems", CheckBox.IsCheckedProperty, chkAutoScroll);
+            CreateBinding("ShowOnlyItems", CheckBox.IsCheckedProperty, chkShowOnlyItems);
             CreateBinding("IgnoreGoldDrops", CheckBox.IsCheckedProperty, chkIgnoreGoldDrops);
             alerts.Add(new LogAlert() { Trigger = "ring_becoming", AlertText = "BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING BECOMING " });
             alertsObs = new ObservableCollection<LogAlert>(alerts);
@@ -98,8 +98,20 @@ namespace LogReader
                 }
             }
         }
+        public bool? ShowOnlyItems
+        {
+            get { return onlyItems; }
+            set
+            {
+                if (onlyItems != value)
+                {
+                    onlyItems = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
 
-		public string NDDirectory
+        public string NDDirectory
 		{
 			get { return ndDir; }
 			set
@@ -120,17 +132,6 @@ namespace LogReader
         public double TextDisplayWidth
         {
             get { return alertPanel.ActualWidth; }
-        }
-        public bool? ShowOnlyItems
-        {
-            get { return onlyItems; }
-            set {
-                if (onlyItems != value)
-                {
-                    onlyItems = value;
-                    NotifyPropertyChanged();
-                }
-            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -193,7 +194,7 @@ namespace LogReader
         private void Reader_OnLogEvent(object sender, NecroLogs.OnLogEventArgs e)
         {
             Dispatcher.BeginInvoke(new Action(delegate () {
-                if (ShowOnlyItems.HasValue && ShowOnlyItems.Value)
+                if (ShowOnlyItems ?? true)
                 {
                     if (e.Line.Text.StartsWith("ITEM NEW:"))
                     {
@@ -215,7 +216,6 @@ namespace LogReader
                     {
                         if (!e.Line.Text.Contains("itemType: resource_coin"))
                             tbStatus.AppendText(string.Format("{0}: {1}\r\n", e.Line.Timestamp, e.Line.Text));
-
                     }
                     else
                     {
