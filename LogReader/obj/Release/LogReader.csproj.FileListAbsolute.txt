@@ -1,0 +1,26 @@
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Release\LogReader.exe.config
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Release\LogReader.csprojResolveAssemblyReference.cache
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Release\App.g.cs
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Release\LogReader_MarkupCompile.cache
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Release\LogReader_MarkupCompile.lref
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Release\LogReader.exe
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Release\LogReader.pdb
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Release\FirstFloor.ModernUI.dll
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Release\Microsoft.WindowsAPICodePack.dll
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Release\NecroLogs.dll
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Release\NecroLogs.pdb
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Release\FirstFloor.ModernUI.xml
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Release\Microsoft.WindowsAPICodePack.xml
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Release\MainWindow.baml
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Release\MainWindow.g.cs
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Release\App.baml
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Release\LogReader.g.resources
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Release\LogReader.Properties.Resources.resources
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Release\LogReader.csproj.GenerateResource.Cache
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Release\LogReader.exe
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Release\LogReader.pdb
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Release\LogReader.exe.config
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Release\LogReader.exe
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Release\LogReader.pdb

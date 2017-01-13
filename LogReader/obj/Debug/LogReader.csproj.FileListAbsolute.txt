@@ -1,0 +1,44 @@
+C:\TFS\LogReader\LogReader\bin\Debug\LogReader.exe.config
+C:\TFS\LogReader\LogReader\bin\Debug\LogReader.exe
+C:\TFS\LogReader\LogReader\bin\Debug\LogReader.pdb
+C:\TFS\LogReader\LogReader\bin\Debug\FirstFloor.ModernUI.dll
+C:\TFS\LogReader\LogReader\bin\Debug\FirstFloor.ModernUI.xml
+C:\TFS\LogReader\LogReader\obj\Debug\MainWindow.baml
+C:\TFS\LogReader\LogReader\obj\Debug\MainWindow.g.cs
+C:\TFS\LogReader\LogReader\obj\Debug\App.g.cs
+C:\TFS\LogReader\LogReader\obj\Debug\LogReader_MarkupCompile.cache
+C:\TFS\LogReader\LogReader\obj\Debug\LogReader_MarkupCompile.lref
+C:\TFS\LogReader\LogReader\obj\Debug\App.baml
+C:\TFS\LogReader\LogReader\obj\Debug\LogReader.g.resources
+C:\TFS\LogReader\LogReader\obj\Debug\LogReader.Properties.Resources.resources
+C:\TFS\LogReader\LogReader\obj\Debug\LogReader.csproj.GenerateResource.Cache
+C:\TFS\LogReader\LogReader\obj\Debug\LogReader.exe
+C:\TFS\LogReader\LogReader\obj\Debug\LogReader.pdb
+C:\TFS\LogReader\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\TFS\LogReader\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\TFS\LogReader\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.xml
+C:\TFS\LogReader\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+C:\TFS\LogReader\LogReader\obj\Debug\LogReader.csprojResolveAssemblyReference.cache
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Debug\LogReader.exe.config
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\LogReader.exe
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\LogReader.pdb
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Debug\LogReader.exe
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Debug\LogReader.pdb
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Debug\NecroLogs.dll
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Debug\NecroLogs.pdb
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.xml
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\LogReader.csprojResolveAssemblyReference.cache
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\MainWindow.baml
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\MainWindow.g.cs
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\App.g.cs
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\LogReader_MarkupCompile.cache
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\LogReader_MarkupCompile.lref
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\App.baml
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\LogReader.g.resources
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\LogReader.Properties.Resources.resources
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\LogReader\obj\Debug\LogReader.csproj.GenerateResource.Cache

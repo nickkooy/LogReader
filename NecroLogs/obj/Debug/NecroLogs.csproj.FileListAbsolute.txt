@@ -1,0 +1,4 @@
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\NecroLogs\bin\Debug\NecroLogs.dll
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\NecroLogs\bin\Debug\NecroLogs.pdb
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\NecroLogs\obj\Debug\NecroLogs.dll
+C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\NecroLogs\obj\Debug\NecroLogs.pdb
