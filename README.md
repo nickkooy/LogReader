@@ -69,9 +69,13 @@ Spaces are ignored and removed. If there are spaces between the words, then thos
 If you want a list of the item names, check out the necrodancer.xml file. I'll also add the current item list to the end of this README.
 
 Here's some expressions that I've been using:
+
 (shovel_blood | shovel_strength) & familiar_shopkeeper & weapon_golden & (!golden_harp) & (!golden_staff)
+
 (shovel_blood | shovel_strength) & weapon_golden & (spell_heal & (ring_mana | ring_becoming))
+
 (spell_bomb | spell_heal) & charm_bomb & ring_manashovel_blood
+
 
 To get it going click start. It'll say something like 'Load a level in Necrodancer to begin.'
 Once it reads a level loading it'll starting doing it's magickery. It won't stop until you click stop or it finds the stuff.
@@ -80,7 +84,16 @@ Once it reads a level loading it'll starting doing it's magickery. It won't stop
 Okay I'm sick of typing. I'll add more about the other options, formats, and alerts later. Hopefully it's straight forward enough that you can figure it out.
 If stuff breaks pls let me know and I'll push out changes as needed.
 
-<items><items>
+
+
+
+
+
+
+
+
+
+<items>
 armor_chainmail
 
 armor_heavyglass
