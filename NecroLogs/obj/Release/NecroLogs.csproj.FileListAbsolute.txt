@@ -3,3 +3,8 @@ C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\NecroLogs\bin\Release\
 C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\NecroLogs\obj\Release\NecroLogs.csprojResolveAssemblyReference.cache
 C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\NecroLogs\obj\Release\NecroLogs.dll
 C:\Users\Nick\Desktop\Puzzdor3-master (1)\Puzzdor3-master\NecroLogs\obj\Release\NecroLogs.pdb
+C:\Users\Nick\Documents\GitHub\LogReader\NecroLogs\bin\Release\NecroLogs.dll
+C:\Users\Nick\Documents\GitHub\LogReader\NecroLogs\bin\Release\NecroLogs.pdb
+C:\Users\Nick\Documents\GitHub\LogReader\NecroLogs\obj\Release\NecroLogs.csprojResolveAssemblyReference.cache
+C:\Users\Nick\Documents\GitHub\LogReader\NecroLogs\obj\Release\NecroLogs.dll
+C:\Users\Nick\Documents\GitHub\LogReader\NecroLogs\obj\Release\NecroLogs.pdb

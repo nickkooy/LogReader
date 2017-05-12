@@ -49,6 +49,8 @@ namespace LogReader.Expressions
 
         public void ParseExpr(string expr)
         {
+            if (expr == null)
+                expr = "";
             //expr = "shovel_blood & (familiar_shopkeer & (weapon_golden & (!harp) & (!crossbow)))";
             // Remove the white space
             expr = expr.Replace(" ", "");
@@ -167,6 +169,10 @@ namespace LogReader.Expressions
 
         static BoolExpr Make(ref List<Token>.Enumerator polishNotationTokensEnumerator)
         {
+            if (polishNotationTokensEnumerator.Current == null)
+            {
+                return BoolExpr.CreateBoolVar(null);
+            }
             if (polishNotationTokensEnumerator.Current.type == Token.TokenType.LITERAL)
             {
                 BoolExpr lit = BoolExpr.CreateBoolVar(polishNotationTokensEnumerator.Current.value);
@@ -200,6 +206,9 @@ namespace LogReader.Expressions
         }
         bool Eval(BoolExpr expr)
         {
+            if (expr == null || expr.Lit == null)
+                return false;
+
             if (expr.IsLeaf())
             {
                 return booleanValues[expr.Lit];

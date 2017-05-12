@@ -8,9 +8,9 @@
              d:DesignHeight="150" d:DesignWidth="300">
     <DockPanel LastChildFill="False">
         <Label DockPanel.Dock="Top" VerticalAlignment="Center" Margin="0,0,0,4">Reset Key</Label>
-        <TextBox  DockPanel.Dock="Top" Name="txtResetKey" Margin="0,0,0,4" MaxLength="1" MinWidth="22"/>
+        <TextBox  DockPanel.Dock="Top" Name="txtResetKey" Margin="0,0,0,4" MinWidth="22"/>
         <Label  DockPanel.Dock="Top" VerticalAlignment="Center" Margin="0,0,0,4">Pause Key</Label>
-        <TextBox DockPanel.Dock="Top"  Name="txtPauseKey" Margin="0,0,0,4" MaxLength="5" MinWidth="39"/>
+        <TextBox DockPanel.Dock="Top"  Name="txtPauseKey" Margin="0,0,0,4" MinWidth="39"/>
         <Label DockPanel.Dock="Top" VerticalAlignment="Center" Margin="0,0,0,4">Window Name</Label>
         <TextBox DockPanel.Dock="Top" Name="txtWindowName" Margin="0,0,0,0"/>
     </DockPanel>

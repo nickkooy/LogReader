@@ -25,68 +25,6 @@ namespace LogReader.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"
-                    <ArrayOfResetExpr xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-                        <ResetExpr>
-                            <Active>true</Active>
-                            <Expression>shovel_blood &amp; familiar_shopkeeper</Expression>
-                        </ResetExpr>
-                    </ArrayOfResetExpr>
-                ")]
-        public LogReader.Models.ResetExpr[] ResetExpressions {
-            get {
-                return ((LogReader.Models.ResetExpr[])(this["ResetExpressions"]));
-            }
-            set {
-                this["ResetExpressions"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"
-                    <ArrayOfLogFormat xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-                        <LogFormat>
-                            <Active>true</Active>
-                            <Find>ITEM NEW: (-?\d+), (-?\d+) itemType: (\w+) entityNum: \d+</Find>
-                            <Replace>$1 $2  $3</Replace>
-                        </LogFormat>
-                    </ArrayOfLogFormat>
-                ")]
-        public LogReader.LogFormat[] Formats {
-            get {
-                return ((LogReader.LogFormat[])(this["Formats"]));
-            }
-            set {
-                this["Formats"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"
-                    <ArrayOfLogAlert xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-                        <LogAlert>
-                            <Trigger>shovel_blood</Trigger>
-                            <AlertText>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!BLOOD SHOVEL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</AlertText>
-                        </LogAlert>
-                        <LogAlert>
-                            <Trigger>familiar_shopkeeper</Trigger>
-                            <AlertText>$$$$$$$$ BABYMONEY $$$$$$$$</AlertText>
-                        </LogAlert>
-                    </ArrayOfLogAlert>
-                ")]
-        public LogReader.LogAlert[] Alerts {
-            get {
-                return ((LogReader.LogAlert[])(this["Alerts"]));
-            }
-            set {
-                this["Alerts"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool AutoScroll {
             get {
@@ -214,6 +152,67 @@ namespace LogReader.Properties {
             }
             set {
                 this["SidePanelWidth"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfResetExpr xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <ResetExpr>
+    <Active>true</Active>
+    <Expression>shovel_blood &amp; familiar_shopkeeper</Expression>
+  </ResetExpr>
+</ArrayOfResetExpr>")]
+        public LogReader.Models.ResetExpr[] ResetExpressions {
+            get {
+                return ((LogReader.Models.ResetExpr[])(this["ResetExpressions"]));
+            }
+            set {
+                this["ResetExpressions"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfLogFormat xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <LogFormat>
+    <Active>true</Active>
+    <Find>ITEM NEW: (-?\d+), (-?\d+) itemType: (\w+) entityNum: \d+</Find>
+    <Replace>$1 $2  $3</Replace>
+  </LogFormat>
+</ArrayOfLogFormat>")]
+        public LogReader.LogFormat[] Formats {
+            get {
+                return ((LogReader.LogFormat[])(this["Formats"]));
+            }
+            set {
+                this["Formats"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfLogAlert xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <LogAlert>
+    <Active>true</Active>
+    <Trigger>shovel_blood</Trigger>
+    <AlertText>!!!!!!!!!!!!!!BLOOD SHOVEL!!!!!!!!!!!!!!!!!!!!!!!</AlertText>
+  </LogAlert>
+  <LogAlert>
+    <Active>true</Active>
+    <Trigger>familiar_shopkeeper</Trigger>
+    <AlertText>$$$$$$$$ BABYFREDDIE $$$$$$$$</AlertText>
+  </LogAlert>
+</ArrayOfLogAlert>")]
+        public LogReader.LogAlert[] Alerts {
+            get {
+                return ((LogReader.LogAlert[])(this["Alerts"]));
+            }
+            set {
+                this["Alerts"] = value;
             }
         }
     }
