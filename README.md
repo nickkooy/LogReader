@@ -28,9 +28,12 @@ Open up the reset memes window.
 Click Settings.
 
 -Change the reset key to whatever character you use. I use 'r'. It's for reset. Clearly.
+
 -Change the pause key to whatever character you use to pause. 
+
 -Probably don't change the window name. Unless the game window is called something else in a different language or something. idk.
 If that's not set properly it won't send the keystrokes to the right window. got it? good.
+
 
 Click okay to save those settings.
 
@@ -92,8 +95,6 @@ If stuff breaks pls let me know and I'll push out changes as needed.
 
 
 
-
-<items>
 armor_chainmail
 
 armor_heavyglass
@@ -622,5 +623,3 @@ weapon_golden_cutlass
 weapon_blood_cutlass
 
 weapon_glass_cutlass
-
-	</items>
