@@ -44,3 +44,7 @@ C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Release\App.baml
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Release\LogReader.g.resources
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Release\LogReader.Properties.Resources.resources
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Release\LogReader.csproj.GenerateResource.Cache
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Release\Content\ResetMachineOptions.g.cs
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Release\ResetMachineWindow.g.cs
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Release\Content\ResetMachineOptions.baml
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Release\ResetMachineWindow.baml

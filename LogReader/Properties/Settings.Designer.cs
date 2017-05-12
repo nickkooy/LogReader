@@ -8,23 +8,213 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LogReader.Properties
-{
-
-
-	[global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-	internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-	{
-
-		private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-		public static Settings Default
-		{
-			get
-			{
-				return defaultInstance;
-			}
-		}
-	}
+namespace LogReader.Properties {
+    
+    
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"
+                    <ArrayOfResetExpr xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+                        <ResetExpr>
+                            <Active>true</Active>
+                            <Expression>shovel_blood &amp; familiar_shopkeeper</Expression>
+                        </ResetExpr>
+                    </ArrayOfResetExpr>
+                ")]
+        public LogReader.Models.ResetExpr[] ResetExpressions {
+            get {
+                return ((LogReader.Models.ResetExpr[])(this["ResetExpressions"]));
+            }
+            set {
+                this["ResetExpressions"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"
+                    <ArrayOfLogFormat xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+                        <LogFormat>
+                            <Active>true</Active>
+                            <Find>ITEM NEW: (-?\d+), (-?\d+) itemType: (\w+) entityNum: \d+</Find>
+                            <Replace>$1 $2  $3</Replace>
+                        </LogFormat>
+                    </ArrayOfLogFormat>
+                ")]
+        public LogReader.LogFormat[] Formats {
+            get {
+                return ((LogReader.LogFormat[])(this["Formats"]));
+            }
+            set {
+                this["Formats"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"
+                    <ArrayOfLogAlert xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+                        <LogAlert>
+                            <Trigger>shovel_blood</Trigger>
+                            <AlertText>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!BLOOD SHOVEL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</AlertText>
+                        </LogAlert>
+                        <LogAlert>
+                            <Trigger>familiar_shopkeeper</Trigger>
+                            <AlertText>$$$$$$$$ BABYMONEY $$$$$$$$</AlertText>
+                        </LogAlert>
+                    </ArrayOfLogAlert>
+                ")]
+        public LogReader.LogAlert[] Alerts {
+            get {
+                return ((LogReader.LogAlert[])(this["Alerts"]));
+            }
+            set {
+                this["Alerts"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AutoScroll {
+            get {
+                return ((bool)(this["AutoScroll"]));
+            }
+            set {
+                this["AutoScroll"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IgnoreGold {
+            get {
+                return ((bool)(this["IgnoreGold"]));
+            }
+            set {
+                this["IgnoreGold"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool OnlyItems {
+            get {
+                return ((bool)(this["OnlyItems"]));
+            }
+            set {
+                this["OnlyItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ClearLevel {
+            get {
+                return ((bool)(this["ClearLevel"]));
+            }
+            set {
+                this["ClearLevel"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool LevelCreateItemsOnly {
+            get {
+                return ((bool)(this["LevelCreateItemsOnly"]));
+            }
+            set {
+                this["LevelCreateItemsOnly"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowTimestamp {
+            get {
+                return ((bool)(this["ShowTimestamp"]));
+            }
+            set {
+                this["ShowTimestamp"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\program files (x86)\\steam\\steamapps\\common\\Crypt of the Necrodancer")]
+        public string NDDir {
+            get {
+                return ((string)(this["NDDir"]));
+            }
+            set {
+                this["NDDir"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("r")]
+        public string ResetKey {
+            get {
+                return ((string)(this["ResetKey"]));
+            }
+            set {
+                this["ResetKey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("{ESC}")]
+        public string PauseKey {
+            get {
+                return ((string)(this["PauseKey"]));
+            }
+            set {
+                this["PauseKey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Crypt of the Necrodancer")]
+        public string WindowName {
+            get {
+                return ((string)(this["WindowName"]));
+            }
+            set {
+                this["WindowName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("332")]
+        public global::System.Windows.GridLength SidePanelWidth {
+            get {
+                return ((global::System.Windows.GridLength)(this["SidePanelWidth"]));
+            }
+            set {
+                this["SidePanelWidth"] = value;
+            }
+        }
+    }
 }

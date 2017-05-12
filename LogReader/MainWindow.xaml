@@ -7,39 +7,81 @@
                   LogoData="M 35.6593,21.2441C 34.4927,25.4107 23.4927,30.2441 19.4927,30.7441C 12.9927,31.0774 6.82601,29.0774 6.99268,23.4107C 7.15934,17.7441 15.326,15.5774 18.326,15.2441C 21.326,14.9107 25.6593,18.4107 31.1593,17.5774M 10.1094,0.499999C 22.9844,4.62501 9.60937,11.375 4.48438,7.75C 1.35938,7.00001 -4.76563,14.25 9.73437,18.75M 10.6593,29.0774L 6.98438,32.375L 10.6094,35M 13.326,30.0774L 13.1094,33.625L 16.7344,34.125M 26.326,28.4107L 25.7344,31.75L 28.1094,32.625M 30.1094,26.25L 32.4844,29.625L 33.9844,28.375M 32.3594,15.125C 22.1094,13.625 25.9844,3.125 30.9844,4.375C 38.3594,4.75001 37.0343,10.0774 37.1593,12.5774C 37.6593,8.4524 37.7344,4.12501 41.4844,4.00001C 52.1094,6.25001 44.9844,14.5 40.4844,14.5M 31.7344,19.875C 28.9844,15.375 35.8594,10.5 39.7344,13.625C 40.6989,14.5896 41.096,15.582 41.0888,16.5234L 41.1094,16.5L 47.5051,16.9061C 47.5783,16.1758 48.1302,15.4358 48.8594,15.375C 50.3594,15.25 51.8594,18.25 49.2344,18.375C 48.2116,18.4237 47.7012,17.998 47.5479,17.4528L 38.7852,20.215C 36.4988,21.798 33.1387,22.173 31.7344,19.875 Z M 34.326,17.0774C 34.326,13.7441 36.326,14.0774 36.826,16.4107M 38.0816,16.8059C 38.0816,13.4725 39.6593,13.7441 40.1593,16.0774"
                   Style="{StaticResource BlankWindow}">
     <!--<ScrollViewer>-->
-        <Grid Name="mainGrid">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="5"></ColumnDefinition>
-                <ColumnDefinition Width="200"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+    <Grid Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5"></ColumnDefinition>
+            <ColumnDefinition Name="sidePanel"  Width="250"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
-            <!-- Alerts -->
-            <DockPanel Grid.Column="2" Margin="2,0,0,0" Name="alertPanel" DockPanel.Dock="Right">
-                <TextBlock DockPanel.Dock="Top" Style="{StaticResource Heading2}">Alerts</TextBlock>
-                <DataGrid Name="dgAlerts" HorizontalContentAlignment="Stretch" AutoGenerateColumns="True">
-                </DataGrid>
-            </DockPanel>
+        <!-- Alerts -->
+        <DockPanel Grid.Column="2" Margin="4,0,2,2" Name="alertPanel" DockPanel.Dock="Right">
+            <Grid Name="sideGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <DockPanel Grid.Row="0">
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Heading2}">Alerts</TextBlock>
+                    <DataGrid Name="dgAlerts"  AutoGenerateColumns="False" HeadersVisibility="Column" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"  >
+                        <DataGrid.Columns>
+                            <DataGridCheckBoxColumn Header="Active" Binding="{Binding Active, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <DataGridTextColumn Header="Trigger" Binding="{Binding Trigger, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <DataGridTextColumn Header="Alert" Binding="{Binding AlertText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+                <GridSplitter Grid.Row="1" Height="5" HorizontalAlignment="Stretch"/>
+                <DockPanel Grid.Row="2">
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Heading2}">Formats</TextBlock>
+                    <DataGrid Name="dgFormats" AutoGenerateColumns="False" HeadersVisibility="Column" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"  >
+                        <DataGrid.Columns>
+                            <DataGridCheckBoxColumn Header="Active" Binding="{Binding Active, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <DataGridTextColumn Header="Find" Binding="{Binding Find, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <DataGridTextColumn Header="Replace" Binding="{Binding Replace, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+                <GridSplitter Grid.Row="3" Height="5" HorizontalAlignment="Stretch"/>
+                <DockPanel Grid.Row="4">
+                    <mui:ModernButton IconData="F1 M 38,20.5833C 42.9908,20.5833 47.4912,22.6825 50.6667,26.046L 50.6667,17.4167L 55.4166,22.1667L 55.4167,34.8333L 42.75,34.8333L 38,30.0833L 46.8512,30.0833C 44.6768,27.6539 41.517,26.125 38,26.125C 31.9785,26.125 27.0037,30.6068 26.2296,36.4167L 20.6543,36.4167C 21.4543,27.5397 28.9148,20.5833 38,20.5833 Z M 38,49.875C 44.0215,49.875 48.9963,45.3932 49.7703,39.5833L 55.3457,39.5833C 54.5457,48.4603 47.0852,55.4167 38,55.4167C 33.0092,55.4167 28.5088,53.3175 25.3333,49.954L 25.3333,58.5833L 20.5833,53.8333L 20.5833,41.1667L 33.25,41.1667L 38,45.9167L 29.1487,45.9167C 31.3231,48.3461 34.483,49.875 38,49.875 Z "
+                                      EllipseDiameter="96" EllipseStrokeThickness="3" IconWidth="64" IconHeight="64"
+                                      Name="btnResetWindowOpen" DockPanel.Dock="Top" Click="btnResetWindowToggle_Click" MinHeight="26" 
+                            IsEnabled="{Binding IsResetWindowOpenBtnEnabled, ElementName=mainWin, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">Reset Memes</mui:ModernButton>
+                </DockPanel>
+            </Grid>
+        </DockPanel>
 
-            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch"></GridSplitter>
-            <DockPanel Grid.Column="0" Margin="0,0,2,0" Name="dock">
-                <DockPanel.Resources>
-                    <PathGeometry x:Key="FolderPath">F1 M 19,50L 28,34L 63,34L 54,50L 19,50 Z M 19,28.0001L 35,28C 36,25 37.4999,24.0001 37.4999,24.0001L 48.75,24C 49.3023,24 50,24.6977 50,25.25L 50,28L 53.9999,28.0001L 53.9999,32L 27,32L 19,46.4L 19,28.0001 Z</PathGeometry>
-                </DockPanel.Resources>
+        <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch"/>
+        <DockPanel Grid.Column="0" Margin="0,0,2,0" Name="dock">
+            <DockPanel.Resources>
+                <PathGeometry x:Key="FolderPath">F1 M 19,50L 28,34L 63,34L 54,50L 19,50 Z M 19,28.0001L 35,28C 36,25 37.4999,24.0001 37.4999,24.0001L 48.75,24C 49.3023,24 50,24.6977 50,25.25L 50,28L 53.9999,28.0001L 53.9999,32L 27,32L 19,46.4L 19,28.0001 Z</PathGeometry>
+            </DockPanel.Resources>
 
-                <StackPanel DockPanel.Dock="Top">
-                <TextBlock Text="Heading!" Style="{StaticResource Heading2}" />
+            <StackPanel DockPanel.Dock="Top">
+                <TextBlock Text="Necrodancer Directory" Style="{StaticResource Heading2}" Margin="0,0,0,4"  />
                 <DockPanel LastChildFill="True">
                     <Button DockPanel.Dock="Left" Padding="4,0,4,0" Name="btnOpenLog" Click="btnOpenLog_Click">
                         <Path Data="{StaticResource FolderPath}" Width="12" Height="24" Fill="Black" Stretch="Uniform" ></Path>
                     </Button>
                     <TextBox Name="txtFolder" Margin="0,0,0,0" Text="{Binding NDDirectory, ElementName=mainWin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 </DockPanel>
-                <CheckBox Name="chkAutoScroll" IsChecked="{Binding Path=AutoScroll, ElementName=mainWind}">AutoScroll</CheckBox>
-                <CheckBox Name="chkShowOnlyItems" IsChecked="{Binding Path=ShowOnlyItems, ElementName=mainWind}">Show Only Items</CheckBox>
-                <CheckBox Name="chkIgnoreGoldDrops">Ignore Gold Drops</CheckBox>
+                <WrapPanel Margin="0,2,0,2">
+                    <CheckBox Name="chkWriteTimestamp" IsChecked="{Binding Path=ShowTimestamp, ElementName=mainWind}" Margin="0,0,8,0">Write Timestamp</CheckBox>
+                    <CheckBox Name="chkAutoScroll" IsChecked="{Binding Path=AutoScroll, ElementName=mainWind}" Margin="0,0,8,0">AutoScroll</CheckBox>
+                </WrapPanel>
+                <WrapPanel Margin="0,2,0,2">
+                    <CheckBox Name="chkShowOnlyItems" IsChecked="{Binding Path=ShowOnlyItems, ElementName=mainWind}" Margin="0,0,8,0">Show Only Items</CheckBox>
+                    <CheckBox Name="chkIgnoreGoldDrops" Margin="0,0,8,0">Ignore Gold Drops</CheckBox>
+                    <CheckBox Name="chkClearLevel" IsChecked="{Binding Path=ClearOnNewLevel, ElementName=mainWin}" Margin="0,0,8,0">Clear on new level</CheckBox>
+                    <CheckBox Name="chkSpawnItemsOnly" IsChecked="{Binding Path=SpawnItemsOnly, ElementName=mainWin}" Margin="0,0,8,0">Only show new items during level generation</CheckBox>
+                    <CheckBox Name="chkLevelExit" IsChecked="{Binding Path=LevelExit, ElementName=mainWin}" Margin="0,0,8,0">Log Exit</CheckBox>
+                </WrapPanel>
             </StackPanel>
-            <ScrollViewer Name="svStatus">
+            <ScrollViewer Name="svStatus" Margin="0,8,8,0">
                 <TextBox Name="tbStatus" VerticalScrollBarVisibility="Auto" AcceptsReturn="True"></TextBox>
             </ScrollViewer>
         </DockPanel>

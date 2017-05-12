@@ -1,7 +1,74 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LogReader.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ResetExpressions" Type="LogReader.Models.ResetExpr[]" Scope="User">
+      <Value Profile="(Default)">
+                    &lt;ArrayOfResetExpr xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+                        &lt;ResetExpr&gt;
+                            &lt;Active&gt;true&lt;/Active&gt;
+                            &lt;Expression&gt;shovel_blood &amp;amp; familiar_shopkeeper&lt;/Expression&gt;
+                        &lt;/ResetExpr&gt;
+                    &lt;/ArrayOfResetExpr&gt;
+                </Value>
+    </Setting>
+    <Setting Name="Formats" Type="LogReader.LogFormat[]" Scope="User">
+      <Value Profile="(Default)">
+                    &lt;ArrayOfLogFormat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+                        &lt;LogFormat&gt;
+                            &lt;Active&gt;true&lt;/Active&gt;
+                            &lt;Find&gt;ITEM NEW: (-?\d+), (-?\d+) itemType: (\w+) entityNum: \d+&lt;/Find&gt;
+                            &lt;Replace&gt;$1 $2  $3&lt;/Replace&gt;
+                        &lt;/LogFormat&gt;
+                    &lt;/ArrayOfLogFormat&gt;
+                </Value>
+    </Setting>
+    <Setting Name="Alerts" Type="LogReader.LogAlert[]" Scope="User">
+      <Value Profile="(Default)">
+                    &lt;ArrayOfLogAlert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+                        &lt;LogAlert&gt;
+                            &lt;Trigger&gt;shovel_blood&lt;/Trigger&gt;
+                            &lt;AlertText&gt;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!BLOOD SHOVEL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&lt;/AlertText&gt;
+                        &lt;/LogAlert&gt;
+                        &lt;LogAlert&gt;
+                            &lt;Trigger&gt;familiar_shopkeeper&lt;/Trigger&gt;
+                            &lt;AlertText&gt;$$$$$$$$ BABYMONEY $$$$$$$$&lt;/AlertText&gt;
+                        &lt;/LogAlert&gt;
+                    &lt;/ArrayOfLogAlert&gt;
+                </Value>
+    </Setting>
+    <Setting Name="AutoScroll" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="IgnoreGold" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="OnlyItems" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ClearLevel" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LevelCreateItemsOnly" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowTimestamp" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="NDDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\program files (x86)\steam\steamapps\common\Crypt of the Necrodancer</Value>
+    </Setting>
+    <Setting Name="ResetKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">r</Value>
+    </Setting>
+    <Setting Name="PauseKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">{ESC}</Value>
+    </Setting>
+    <Setting Name="WindowName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Crypt of the Necrodancer</Value>
+    </Setting>
+    <Setting Name="SidePanelWidth" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">332</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

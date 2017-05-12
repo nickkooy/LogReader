@@ -16,6 +16,8 @@ namespace LogReader
         const int ReadLineWaitTime = 300;
         const int ReadStartDelay = 100;
 
+        public event EventHandler<LogReaderErrorArgs> OnFileError;
+
 		public LReader(string dir, int qSize = 5)
 		{
 			NecrodancerDir = dir;
@@ -29,7 +31,14 @@ namespace LogReader
                 if (ndDir != value)
                 {
                     ndDir = value;
-                    dirCount = Directory.Exists(ndDir) ? Directory.EnumerateFiles(NecrodancerLogDirectory).Count() : 0;
+                    try
+                    {
+                        dirCount = Directory.Exists(ndDir) && Directory.Exists(NecrodancerLogDirectory) ? Directory.EnumerateFiles(NecrodancerLogDirectory).Count() : 0;
+                    }
+                    catch (Exception e)
+                    {
+                        OnFileError?.Invoke(this, new LogReaderErrorArgs("There was a problem reading the Necrodancer Directory." + Environment.NewLine + e.Message));
+                    }
                     LastModified = GetLastModifiedLog();
                 }
             }
@@ -52,8 +61,19 @@ namespace LogReader
                 DisposeTimer();
                 if (lastModified != null)
                 {
-                    logStream = File.Open(lastModified.FullPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                    reader = new StreamReader(logStream);
+                    try
+                    {
+                        logStream = File.Open(lastModified.FullPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                        reader = new StreamReader(logStream);
+                    }
+                    catch (Exception e)
+                    {
+                        OnFileError?.Invoke(this, new LogReaderErrorArgs($"Error opening log file: {lastModified.FullPath}{Environment.NewLine}{e.Message}"));
+                        lastModified = null;
+                        DisposeStreams();
+                        DisposeTimer();
+                        gcCollect = true;
+                    }
                 }
 
                 if (gcCollect)
@@ -145,7 +165,7 @@ namespace LogReader
                 return null;
 
             // Check that we actually got the end of the line
-            while (line.Substring(line.Length - 2) != "\r\n")
+            while (line.Substring(line.Length - Environment.NewLine.Length) != Environment.NewLine)
             {
                 // Wait a bit
                 System.Threading.Thread.Sleep(ReadingWaitTime);
@@ -154,17 +174,35 @@ namespace LogReader
             }
             
             // Return the line without /r/n
-            return line.Substring(0, line.Length - 2);
+            return line.Substring(0, line.Length - Environment.NewLine.Length);
         }
         
 
         NDLogInfo GetLastModifiedLog()
         {
+            // Make sure it exists
             if (!Directory.Exists(NecrodancerDir))
+            {
+                // Check that you can read it
+                if (!Utils.Wnd.CanReadDirectory(NecrodancerDir))
+                {
+                    OnFileError?.Invoke(this, new LogReaderErrorArgs($"Can't read directory: {NecrodancerDir}{Environment.NewLine}Try running this as admin or changing the file permissions."));
+                    return null;
+                }
+                OnFileError?.Invoke(this, new LogReaderErrorArgs($"Directory doesn't exist: {NecrodancerDir}"));
                 return null;
+            }
 
             if (!Directory.Exists(NecrodancerLogDirectory))
+            {
+                if (!Utils.Wnd.CanReadDirectory(NecrodancerLogDirectory))
+                {
+                    OnFileError?.Invoke(this, new LogReaderErrorArgs($"Can't read directory: {NecrodancerLogDirectory}{Environment.NewLine}Try running this as an admin or changing the file permissions."));
+                    return null;
+                }
+                OnFileError?.Invoke(this, new LogReaderErrorArgs($"Log directory not found: {NecrodancerLogDirectory}"));
                 return null;
+            }
             
             NDLogInfo logInfo = null;
             foreach (string file in Directory.EnumerateFiles(NecrodancerLogDirectory))
@@ -174,6 +212,11 @@ namespace LogReader
                 {
                     logInfo = newLog;
                 }
+            }
+
+            if (logInfo == null)
+            {
+                OnFileError?.Invoke(this, new LogReaderErrorArgs($"No logs found in: {NecrodancerLogDirectory}"));
             }
 
             return logInfo;

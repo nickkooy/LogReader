@@ -68,6 +68,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="Content\ResetMachineOptions.xaml.cs">
+      <DependentUpon>ResetMachineOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Expressions\BoolExpr.cs" />
+    <Compile Include="Expressions\ExprReader.cs" />
+    <Compile Include="Expressions\Token.cs" />
+    <Compile Include="Models\Converters\LogAlertConverter.cs" />
+    <Compile Include="Models\Converters\LogFormatConverter.cs" />
+    <Compile Include="Models\Converters\ResetExprConverter.cs" />
+    <Compile Include="Models\ResetExpr.cs" />
+    <Compile Include="OnLogReaderError.cs" />
+    <Compile Include="ResetExprDataProvider.cs" />
+    <Compile Include="ResetMachine.cs" />
+    <Compile Include="ResetMachineWindow.xaml.cs">
+      <DependentUpon>ResetMachineWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Utils\Math.cs" />
+    <Compile Include="Utils\Text.cs" />
+    <Compile Include="Utils\Wnd.cs" />
+    <Compile Include="WindHook.cs" />
+    <Page Include="Content\ResetMachineOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -77,7 +103,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Extensions.cs" />
-    <Compile Include="LogAlert.cs" />
+    <Compile Include="Models\LogAlert.cs" />
+    <Compile Include="Models\LogFormat.cs" />
     <Compile Include="LogReader.cs" />
     <Compile Include="Models\Actions\CreateItem.cs" />
     <Compile Include="Models\Actions\EquipItem.cs" />
@@ -93,6 +120,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ResetMachineWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NDLogInfo.cs" />
@@ -116,8 +147,9 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>

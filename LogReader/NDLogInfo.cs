@@ -21,7 +21,8 @@ namespace LogReader
         {
             FullPath = filepath;
             FileName = Path.GetFileName(filepath);
-            CreateTime = GetLogDateFromName(FileName);
+            //CreateTime = GetLogDateFromName(FileName);
+            CreateTime = File.GetLastWriteTime(FullPath);
         }
 
 
@@ -42,7 +43,7 @@ namespace LogReader
             if (dStr.Length < 21)
                 return DateTime.MinValue;
             int year, day, hour, min, sec;
-            bool bY, bM, bD, bH, bMin, bS;
+            //bool bY, bM, bD, bH, bMin, bS;
 
             if (int.TryParse(dStr.Substring(0, 4), out year) &&
                 DateTime.TryParseExact(dStr.Substring(5, 1) + dStr.Substring(6, 2).ToLower(), "MMM", new CultureInfo("en-us"), DateTimeStyles.None, out monthDT) &&

@@ -55,11 +55,15 @@ C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\Microsoft.WindowsAP
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader.csprojResolveAssemblyReference.cache
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\MainWindow.baml
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\Content\ResetMachineOptions.g.cs
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\MainWindow.g.cs
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\ResetMachineWindow.g.cs
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\App.g.cs
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader_MarkupCompile.cache
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader_MarkupCompile.lref
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\App.baml
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\Content\ResetMachineOptions.baml
+C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\ResetMachineWindow.baml
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader.g.resources
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader.Properties.Resources.resources
 C:\Users\Nick\Documents\GitHub\LogReader\LogReader\obj\Debug\LogReader.csproj.GenerateResource.Cache
