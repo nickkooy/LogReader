@@ -82,9 +82,9 @@ namespace LogReader
             CreateBinding("ShowOnlyItems", CheckBox.IsCheckedProperty, chkShowOnlyItems);
             CreateBinding("IgnoreGoldDrops", CheckBox.IsCheckedProperty, chkIgnoreGoldDrops);
             CreateBinding("ClearOnNewLevel", CheckBox.IsCheckedProperty, chkClearLevel);
-            CreateBinding("SpawnItemsOnly", CheckBox.IsCheckedProperty, chkSpawnItemsOnly);
+            //CreateBinding("SpawnItemsOnly", CheckBox.IsCheckedProperty, chkSpawnItemsOnly);
             CreateBinding("ShowTimestamp", CheckBox.IsCheckedProperty, chkWriteTimestamp);
-            CreateBinding("LevelExit", CheckBox.IsCheckedProperty, chkLevelExit);
+            //CreateBinding("LevelExit", CheckBox.IsCheckedProperty, chkLevelExit);
             CreateBinding("SidePanelWidth", ColumnDefinition.WidthProperty, sidePanel);
             //alerts.Add(new LogAlert() { Trigger = "shovel_blood", AlertText = "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!BLOOD SHOVEL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" });
             //alerts.Add(new LogAlert() { Trigger = "familiar_shopkeeper", AlertText = "$$$$$ BABY FREDDY $$$$$" });
@@ -450,22 +450,41 @@ namespace LogReader
             }
         }
 
+        int level = 1;
+        int zone = 1;
+
         private void Reader_OnLogEvent(object sender, NecroLogs.OnLogEventArgs e)
         {
             Dispatcher.BeginInvoke(new Action(delegate () {
-                
-                if (LevelExit ?? false)
+                //if (LevelExit ?? false)
+                //{
+                //    if (e.Line.Text.StartsWith("PLACEEXIT: "))
+                //    {
+                //        _WriteItemLine(e.Line.Timestamp, e.Line.Text);
+                //        return;
+                //    }
+                //}
+                //DETERMINISTIC START: 744849 z: 1 l: 2
+                if (e.Line.Text.StartsWith("DETERMINISTIC START:"))
                 {
-                    if (e.Line.Text.StartsWith("PLACEEXIT: "))
+                    var m = Regex.Match(e.Line.Text, "z: (\\d+) l: (\\d+)");
+                    if (m.Success && m.Groups.Count >= 3)
                     {
-                        _WriteItemLine(e.Line.Timestamp, e.Line.Text);
-                        return;
+                        if (int.TryParse(m.Groups[1].Value, out zone) && int.TryParse(m.Groups[2].Value, out level))
+                        {
+
+                        }
+                        else
+                        {
+                            level = 0;
+                            zone = 0;
+                        }
                     }
                 }
 
                 if (ClearOnNewLevel ?? false)
                 {
-                    if (e.Line.Text.StartsWith("NEWLEVEL:"))
+                    if (e.Line.Text.StartsWith("NEWLEVEL:") || e.Line.Text.StartsWith("DETERMINISTIC START:"))
                     {
                         tbStatus.Clear();
                     }
@@ -476,6 +495,11 @@ namespace LogReader
 
                 if (Regex.IsMatch(e.Line.Text, "CREATEMAP ZONE\\d+: Finished!") || e.Line.Text.StartsWith("Level generation completed"))
                     creatingLevel = false;
+
+                //if (!creatingLevel)
+                //    return;
+                if (!(zone == 1 && level == 1))
+                    return;
 
                 if (ShowOnlyItems ?? false)
                 {
