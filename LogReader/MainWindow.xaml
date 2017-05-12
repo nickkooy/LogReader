@@ -78,7 +78,7 @@
                     <CheckBox Name="chkIgnoreGoldDrops" Margin="0,0,8,0">Ignore Gold Drops</CheckBox>
                     <CheckBox Name="chkClearLevel" IsChecked="{Binding Path=ClearOnNewLevel, ElementName=mainWin}" Margin="0,0,8,0">Clear on new level</CheckBox>
                     <CheckBox Name="chkSpawnItemsOnly" IsChecked="{Binding Path=SpawnItemsOnly, ElementName=mainWin}" Margin="0,0,8,0">Only show new items during level generation</CheckBox>
-                    <CheckBox Name="chkLevelExit" IsChecked="{Binding Path=LevelExit, ElementName=mainWin}" Margin="0,0,8,0">Log Exit</CheckBox>
+                    <!--<CheckBox Name="chkLevelExit" IsChecked="{Binding Path=LevelExit, ElementName=mainWin}" Margin="0,0,8,0">Log Exit</CheckBox>-->
                 </WrapPanel>
             </StackPanel>
             <ScrollViewer Name="svStatus" Margin="0,8,8,0">
