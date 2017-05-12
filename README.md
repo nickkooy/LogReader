@@ -55,9 +55,13 @@ Double click beneath the current expression to add another.
 That should open up a text box as well for you to edit.
 
 I don't really feel like explaining how to do the logic part. So here's the symbols you can use:
+
 ( )	Parens for grouping stuff together
+
 |	Pipe for logical OR
+
 &	Ampersand for logical AND
+
 
 Every other non-space character will be treated as part of an item name that you are looking for. 
 Spaces are ignored and removed. If there are spaces between the words, then those words will be smashed together. 'blood shovel' will become 'bloodshovel' which isn't an item name. So it will never be true.
