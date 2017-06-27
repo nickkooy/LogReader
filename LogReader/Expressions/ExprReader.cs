@@ -206,10 +206,10 @@ namespace LogReader.Expressions
         }
         bool Eval(BoolExpr expr)
         {
-            if (expr == null || expr.Lit == null)
+            if (expr == null)
                 return false;
 
-            if (expr.IsLeaf())
+            if (expr.IsLeaf() && expr.Lit != null)
             {
                 return booleanValues[expr.Lit];
             }

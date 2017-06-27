@@ -443,6 +443,8 @@ namespace LogReader
         {
             get {
                 bool sonly = (!SpawnItemsOnly.HasValue || !SpawnItemsOnly.Value);
+                if (!(level == 1 && zone == 1))
+                    return false;
                 return      // Not spawn only items
                         sonly ||
                           // Spawn only items and creatingLevel
@@ -498,8 +500,8 @@ namespace LogReader
 
                 //if (!creatingLevel)
                 //    return;
-                if (!(zone == 1 && level == 1))
-                    return;
+                //if (!(zone == 1 && level == 1))
+                //    return;
 
                 if (ShowOnlyItems ?? false)
                 {
